@@ -40,7 +40,7 @@ namespace WordleButWorks
             bool found = false;
             string Word = Words[RandomInt];
             int i = 1;
-            Word = "array";
+            //Word = "array";
             
 
             Console.WriteLine("Welcome to Wordle! Please guess our random 5 letter word. If you guessed a letter correctly and it is in the right place, a 'G' will appear under it. If it is correct, but it is in the wrong place an 'A' will appear under it. Otherwise, there will be an X.");
