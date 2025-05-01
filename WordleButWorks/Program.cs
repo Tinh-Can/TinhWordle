@@ -36,6 +36,8 @@ namespace WordleButWorks
             "giddy", "hence", "inlay", "jolly", "knurl", "lucid", "mirth", "north", "oxide", "proud",
             "quill", "rifle", "scorn", "tryst", "under", "vexed", "wryly", "xenon", "yacht", "zebra"};
 
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+
             int RandomInt = random.Next(0, 99);
             bool found = false;
             string Word = Words[RandomInt];
@@ -92,18 +94,26 @@ namespace WordleButWorks
                     found = true;
                 } else
                 {
-                    //Console.WriteLine(" ");
-                    for (int l = 0; l< 5; l++)
+                    Console.Clear();
+                    for (int l = 0; l < 5; l++)
                     {
                         if (Acorrect[l] == "G")
                         {
-                            Console.Write("G");
-                        } else if (Aplace[l] == "G") 
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write(Response[l]);
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                        }
+                        else if (Aplace[l] == "G")
                         {
-                            Console.Write("A");
-                        } else
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            Console.Write(Response[l]);
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                        }
+                        else
                         {
-                            Console.Write("X");
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.Write(Response[l]);
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
                         }
                     }
                 }
